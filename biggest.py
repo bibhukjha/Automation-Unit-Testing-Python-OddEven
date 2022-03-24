@@ -1,15 +1,23 @@
 import unittest
-
-def biggestNumber(x,y):
-    if x>y:
-        print("Biggest number")
+def check(a,b):
+    if a >= b:
+        return "The number is greater"
     else:
-        print("Smallest number")
+        return "The number is smaller"
 
-    def test_case_biggestNumber(self):
-        x=99
-        y=88
-        result=biggestNumber(x,y)
-        self.assertTrue(result)
-if __name__ == '__main__':
+class BiggerNo(unittest.TestCase):
+
+    def test_case_check(self):
+        a = 40
+        b = 30
+        result = check(a,b)
+        self.assertEqual("The number is greater",result)
+    def test_case_check1(self):
+        a = 20
+        b = 30
+        result = check(a,b)
+        self.assertEqual("The number is smaller",result)
+
+
+if __name__ == "__main__":
     unittest.main()
