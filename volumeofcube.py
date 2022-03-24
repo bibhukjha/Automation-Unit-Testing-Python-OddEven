@@ -8,6 +8,7 @@ class VolumeCeckTest(unittest.TestCase):
         x = 5.556
         result = vol_cube(x)
         self.assertAlmostEqual(result,x*x*x)
+        self.ass
 
 if __name__ == "__main__":
     unittest.main()
